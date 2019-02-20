@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Kim.Study" 
+    xmlns:util="clr-namespace:Kim.Study.Utils"
+    x:Class="Kim.Study.MainPage">
+    <!--<StackLayout>
+        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Image WidthRequest="{util:SizeCalc 750}" HeightRequest="{util:SizeCalc 374}" Source="{util:ImageResource 早晨.png}" />
+    </StackLayout>-->
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".7*"/>
+        </Grid.RowDefinitions>
+       <!-- <cv:CarouselView ItemsSource="{Binding BannelList}" x:Name="CarouselZoos" 
+                         PositionSelected="Handle_PositionSelected" ItemSelected="Handle_ItemSelected"
+                         HorizontalOptions="FillAndExpand" HeightRequest="{util:SizeCalc 374}">
+            <cv:CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Image Aspect="AspectFill" Source="{Binding .,Converter={util:ImageConverter}}"/>
+                </DataTemplate>
+            </cv:CarouselView.ItemTemplate>
+        </cv:CarouselView>-->
+        <CarouselView ItemsSource="{Binding BannelList}" x:Name="CarouselZoos"
+                         
+                         HorizontalOptions="FillAndExpand" HeightRequest="{util:SizeCalc 374}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Image Aspect="AspectFill" Source="{Binding .,Converter={util:ImageConverter}}"/>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <StackLayout x:Name="stackIndicators" HeightRequest="5"
+                     HorizontalOptions="Center" VerticalOptions="End" Orientation="Horizontal">
+             
+        </StackLayout>
+ 
+    </Grid>
+</ContentPage>

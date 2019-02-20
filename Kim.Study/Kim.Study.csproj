@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.5.0.169047" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Images\中午.png" />
+    <None Remove="Images\傍晚.png" />
+    <None Remove="Images\夜晚.png" />
+    <None Remove="Images\早晨.png" />
+    <None Remove="Images\selected.png" />
+    <None Remove="Images\noselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\中午.png" />
+    <EmbeddedResource Include="Images\傍晚.png" />
+    <EmbeddedResource Include="Images\夜晚.png" />
+    <EmbeddedResource Include="Images\早晨.png" />
+    <EmbeddedResource Include="Images\selected.png" />
+    <EmbeddedResource Include="Images\noselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xam.Plugin.WebView.Abstractions\Xam.Plugin.WebView.Abstractions.csproj" />
+  </ItemGroup>
+</Project>

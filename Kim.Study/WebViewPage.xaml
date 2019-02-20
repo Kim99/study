@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:wv="clr-namespace:Xam.Plugin.WebView.Abstractions;assembly=Xam.Plugin.WebView.Abstractions"
+    x:Class="Kim.Study.WebViewPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label x:Name="lblText" Text="defaultd" />
+            <wv:FormsWebView Grid.Row="1" BackgroundColor="Gray" WidthRequest="300" HeightRequest="500"
+            x:Name="myWebView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+            ContentType="StringData"
+            OnContentLoaded="Handle_OnContentLoaded" OnNavigationCompleted="Handle_OnNavigationCompleted" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
