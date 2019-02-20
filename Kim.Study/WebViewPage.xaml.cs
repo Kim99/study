@@ -27,7 +27,7 @@ namespace Kim.Study
         <script src=""https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js""></script>
 
     </head>
-    <body style=""background-color: red;"">
+    <body style=""background-color: white;"">
         <h1>测试</h1>
         <button>点击我</button>
         <script type=""text/javascript"">
